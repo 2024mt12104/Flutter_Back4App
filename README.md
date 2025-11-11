@@ -212,11 +212,11 @@ static const String _className = 'Ajeesh_2024MT12104';
 ## 🎨 UI/UX Features
 
 ### Color Scheme
-- **Primary**: Deep Orange `#FF5722` <span style="background-color: #FF5722; padding: 2px 10px; border-radius: 3px;">  </span> (`Colors.deepOrange`)
-- **Accent**: Orange Accent `#FFAB40` <span style="background-color: #FFAB40; padding: 2px 10px; border-radius: 3px;">  </span> (`Colors.orangeAccent`)
+- **Primary**: Deep Orange ![#FF5722](https://img.shields.io/badge/-FF5722-FF5722?style=flat-square) `#FF5722` (`Colors.deepOrange`)
+- **Accent**: Orange Accent ![#FFAB40](https://img.shields.io/badge/-FFAB40-FFAB40?style=flat-square) `#FFAB40` (`Colors.orangeAccent`)
 - **Background**: Peach gradient 
-  - `#FFE5B4` <span style="background-color: #FFE5B4; padding: 2px 10px; border-radius: 3px; border: 1px solid #ddd;">  </span> → `#FFD580` <span style="background-color: #FFD580; padding: 2px 10px; border-radius: 3px;">  </span> → `#FFCBA4` <span style="background-color: #FFCBA4; padding: 2px 10px; border-radius: 3px;">  </span>
-- **Surface**: White `#FFFFFF` <span style="background-color: #FFFFFF; padding: 2px 10px; border-radius: 3px; border: 1px solid #ddd;">  </span> with subtle shadows
+  - ![#FFE5B4](https://img.shields.io/badge/-FFE5B4-FFE5B4?style=flat-square) `#FFE5B4` → ![#FFD580](https://img.shields.io/badge/-FFD580-FFD580?style=flat-square) `#FFD580` → ![#FFCBA4](https://img.shields.io/badge/-FFCBA4-FFCBA4?style=flat-square) `#FFCBA4`
+- **Surface**: White ![#FFFFFF](https://img.shields.io/badge/-FFFFFF-FFFFFF?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNFRUUiLz48L3N2Zz4=) `#FFFFFF` with subtle shadows
 
 ### Interactions
 - **Tap**: Edit note
