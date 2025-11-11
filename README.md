@@ -4,6 +4,8 @@
 
 A full-featured Flutter notes application with user authentication and cloud database integration using Back4App (Parse Server). This project is done as an assignment per Cross Platform Application Development <-> Mentored by [Chandan R N](chandanrn@wilp.bits-pilani.ac.in)
 
+📊 **[View Presentation](AjB4APP_Presentation.pptx)** - 6-slide project overview covering architecture, features, testing, and demo
+
 ## 🎯 Project Overview
 
 **AjB4APP** is a modern Flutter application that provides a complete notes management system with user authentication, allowing users to create, read, update, and delete personal notes stored securely in the cloud. Each user's notes are private and accessible only after authentication.
