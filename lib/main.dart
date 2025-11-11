@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'db_helper.dart';
 import 'models/note.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk_flutter.dart';
@@ -8,10 +9,21 @@ Future<void> main() async {
   // Ensure Flutter binding is initialized
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Parse Server SDK
-  const keyApplicationId = '5esvvx088bhmqyfmvvmHPus4tc73fvBtyWjC2hWL';
-  const keyClientKey = 'SP8vKx4qaxOPw1fo4dEsqsQ5sPka669Fg6uovYpw';
-  const keyParseServerUrl = 'https://parseapi.back4app.com';
+  // Load environment variables from .env file
+  await dotenv.load(fileName: ".env");
+
+  // Initialize Parse Server SDK with environment variables
+  final keyApplicationId = dotenv.env['BACK4APP_APPLICATION_ID'] ?? '';
+  final keyClientKey = dotenv.env['BACK4APP_CLIENT_KEY'] ?? '';
+  final keyParseServerUrl =
+      dotenv.env['BACK4APP_SERVER_URL'] ?? 'https://parseapi.back4app.com';
+
+  // Validate that required keys are present
+  if (keyApplicationId.isEmpty || keyClientKey.isEmpty) {
+    throw Exception(
+      'Missing Back4App credentials. Please check your .env file.',
+    );
+  }
 
   await Parse().initialize(
     keyApplicationId,

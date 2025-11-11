@@ -98,6 +98,9 @@ dependencies:
   # Parse Server SDK for Back4App integration
   parse_server_sdk_flutter: ^9.0.0
   
+  # Environment variables for secure credential management
+  flutter_dotenv: ^5.2.1
+  
   # Local database support (legacy, not actively used)
   sqflite: ^2.2.8
   path: ^1.8.4
@@ -136,14 +139,23 @@ dev_dependencies:
    flutter pub get
    ```
 
-3. **Configure Back4App credentials**
+3. **Configure Back4App credentials** 🔐
    
-   Open `lib/main.dart` and update with your Back4App credentials:
-   ```dart
-   const keyApplicationId = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-   const keyClientKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-   const keyParseServerUrl = 'https://parseapi.back4app.com';
+   Create a `.env` file from the example template:
+   ```bash
+   cp .env.example .env
    ```
+   
+   Edit `.env` and add your Back4App credentials:
+   ```env
+   BACK4APP_APPLICATION_ID=your_application_id_here
+   BACK4APP_CLIENT_KEY=your_client_key_here
+   BACK4APP_SERVER_URL=https://parseapi.back4app.com
+   ```
+   
+   **⚠️ Important:** Never commit the `.env` file to version control! It's already in `.gitignore`.
+   
+   For detailed security setup, see [SECURITY.md](SECURITY.md)
 
 4. **Run the app**
    ```bash
@@ -232,12 +244,16 @@ static const String _className = 'Ajeesh_2024MT12104';
 
 ## 🔒 Security Features
 
-- ✅ Password encryption (handled by Parse Server)
-- ✅ Session token management
-- ✅ User-scoped data access (ACL)
-- ✅ Secure HTTPS communication
-- ✅ Client key authentication
-- ✅ Auto-session management
+- ✅ **Environment Variable Management**: API keys stored securely in `.env` file
+- ✅ **No Hard-coded Credentials**: All sensitive data loaded from environment
+- ✅ **Password Encryption**: Handled by Parse Server with secure hashing
+- ✅ **Session Token Management**: Automatic secure session handling
+- ✅ **User-scoped Data Access (ACL)**: Notes are private to each user
+- ✅ **Secure HTTPS Communication**: All API calls encrypted with TLS/SSL
+- ✅ **Client Key Authentication**: Back4App client key validation
+- ✅ **Auto-session Management**: Persistent secure authentication
+
+📋 For detailed security setup and best practices, see [SECURITY.md](SECURITY.md)
 
 ## 🐛 Debugging
 
