@@ -1,6 +1,6 @@
-# 📝 Flutter Notes App with Authentication
+# 📝 Flutter Notes App with Authentication - A Project by [Ajeesh K Rajan](2024mt12104@wilp.bits-pilani.ac.in)
 
-A full-featured Flutter notes application with user authentication and cloud database integration using Back4App (Parse Server).
+A full-featured Flutter notes application with user authentication and cloud database integration using Back4App (Parse Server). This project is done as an assignment per Cross Platform Application Development <-> Mentored by [Chandan R N](chandanrn@wilp.bits-pilani.ac.in)
 
 ## 🎯 Project Overview
 
@@ -317,4 +317,4 @@ For issues and questions:
 
 ---
 
-**Built with ❤️ using Flutter & Back4App**
+**Built with ❤️ using Flutter & Back4App by AjeeshKRajan**
