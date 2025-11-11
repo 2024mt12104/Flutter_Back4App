@@ -212,11 +212,11 @@ static const String _className = 'Ajeesh_2024MT12104';
 ## 🎨 UI/UX Features
 
 ### Color Scheme
-- **Primary**: Deep Orange ![#FF5722](https://via.placeholder.com/15/FF5722/FF5722.png) `#FF5722` (`Colors.deepOrange`)
-- **Accent**: Orange Accent ![#FFAB40](https://via.placeholder.com/15/FFAB40/FFAB40.png) `#FFAB40` (`Colors.orangeAccent`)
+- **Primary**: Deep Orange `#FF5722` <span style="background-color: #FF5722; padding: 2px 10px; border-radius: 3px;">  </span> (`Colors.deepOrange`)
+- **Accent**: Orange Accent `#FFAB40` <span style="background-color: #FFAB40; padding: 2px 10px; border-radius: 3px;">  </span> (`Colors.orangeAccent`)
 - **Background**: Peach gradient 
-  - ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/FFE5B4.png) `#FFE5B4` → ![#FFD580](https://via.placeholder.com/15/FFD580/FFD580.png) `#FFD580` → ![#FFCBA4](https://via.placeholder.com/15/FFCBA4/FFCBA4.png) `#FFCBA4`
-- **Surface**: White ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000.png) `#FFFFFF` with subtle shadows
+  - `#FFE5B4` <span style="background-color: #FFE5B4; padding: 2px 10px; border-radius: 3px; border: 1px solid #ddd;">  </span> → `#FFD580` <span style="background-color: #FFD580; padding: 2px 10px; border-radius: 3px;">  </span> → `#FFCBA4` <span style="background-color: #FFCBA4; padding: 2px 10px; border-radius: 3px;">  </span>
+- **Surface**: White `#FFFFFF` <span style="background-color: #FFFFFF; padding: 2px 10px; border-radius: 3px; border: 1px solid #ddd;">  </span> with subtle shadows
 
 ### Interactions
 - **Tap**: Edit note
