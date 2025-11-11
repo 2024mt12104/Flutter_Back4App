@@ -1,10 +1,14 @@
-# 📝 Flutter Notes App with Authentication - A Project by [Ajeesh K Rajan](2024mt12104@wilp.bits-pilani.ac.in)
+# 📝 AjB4APP - Note It Down!
+
+### Flutter Notes App with Authentication - A Project by [Ajeesh K Rajan](2024mt12104@wilp.bits-pilani.ac.in)
 
 A full-featured Flutter notes application with user authentication and cloud database integration using Back4App (Parse Server). This project is done as an assignment per Cross Platform Application Development <-> Mentored by [Chandan R N](chandanrn@wilp.bits-pilani.ac.in)
 
 ## 🎯 Project Overview
 
-This Flutter application provides a complete notes management system with user authentication, allowing users to create, read, update, and delete personal notes stored securely in the cloud. Each user's notes are private and accessible only after authentication.
+**AjB4APP** is a modern Flutter application that provides a complete notes management system with user authentication, allowing users to create, read, update, and delete personal notes stored securely in the cloud. Each user's notes are private and accessible only after authentication.
+
+The app features a vibrant, eye-pleasing design with smooth animations and a cohesive color scheme throughout all screens.
 
 **Test Coverage**: The project includes **87 comprehensive unit tests** with 74% coverage on the Note model and 100% coverage on business logic validation rules. See the [Testing](#-testing) section for detailed coverage metrics.
 
@@ -223,12 +227,44 @@ static const String _className = 'Ajeesh_2024MT12104';
 
 ## 🎨 UI/UX Features
 
-### Color Scheme
-- **Primary**: Deep Orange ![#FF5722](https://img.shields.io/badge/-FF5722-FF5722?style=flat-square) `#FF5722` (`Colors.deepOrange`)
-- **Accent**: Orange Accent ![#FFAB40](https://img.shields.io/badge/-FFAB40-FFAB40?style=flat-square) `#FFAB40` (`Colors.orangeAccent`)
-- **Background**: Peach gradient 
+### App Branding
+- **App Name**: **AjB4APP** (42px, bold, gradient shader)
+- **Tagline**: "Note It Down!" (20px, deep orange)
+- **Visual Hierarchy**: Clear separation between brand name and tagline
+- **Consistency**: Same branding appears on both login and registration screens
+
+### Color Scheme - Vibrant & Eye-Pleasing 🌟
+Our app features a cohesive, modern color palette designed for visual appeal and excellent readability:
+
+- **Primary**: Deep Orange ![#FF5722](https://img.shields.io/badge/-FF5722-FF5722?style=flat-square) `#FF5722` 
+  - Used for: AppBar, buttons, icons, focus borders, primary actions
+  - Material Design component: `Color(0xFFFF5722)`
+  
+- **Accent**: Orange Accent ![#FFAB40](https://img.shields.io/badge/-FFAB40-FFAB40?style=flat-square) `#FFAB40`
+  - Used for: Gradients, highlights, secondary actions, floating buttons
+  - Material Design component: `Color(0xFFFFAB40)`
+  
+- **Background**: Vibrant Peach Gradient 🍑
   - ![#FFE5B4](https://img.shields.io/badge/-FFE5B4-FFE5B4?style=flat-square) `#FFE5B4` → ![#FFD580](https://img.shields.io/badge/-FFD580-FFD580?style=flat-square) `#FFD580` → ![#FFCBA4](https://img.shields.io/badge/-FFCBA4-FFCBA4?style=flat-square) `#FFCBA4`
-- **Surface**: White ![#FFFFFF](https://img.shields.io/badge/-FFFFFF-FFFFFF?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNFRUUiLz48L3N2Zz4=) `#FFFFFF` with subtle shadows
+  - Smooth gradient from top-left to bottom-right
+  - Consistent across login, register, and home screens
+  
+- **Surface**: Pure White ![#FFFFFF](https://img.shields.io/badge/-FFFFFF-FFFFFF?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNFRUUiLz48L3N2Zz4=) `#FFFFFF`
+  - Used for: Cards, text fields, dialog backgrounds
+  - Enhanced with subtle shadows and deep orange borders
+  
+- **Text**: Rich Brown Tones
+  - Primary text: ![#5D4037](https://img.shields.io/badge/-5D4037-5D4037?style=flat-square) `#5D4037` (Dark brown)
+  - Secondary text: ![#8D6E63](https://img.shields.io/badge/-8D6E63-8D6E63?style=flat-square) `#8D6E63` (Medium brown)
+  - High contrast on light backgrounds for excellent readability
+
+### Visual Design Elements
+- **Animated Glows**: Pulsing icon animations with color transitions
+- **Gradient Buttons**: Deep orange to orange accent gradients
+- **Glassmorphic Effects**: Semi-transparent containers with backdrop blur
+- **Rounded Corners**: 15-20px border radius for modern feel
+- **Dynamic Shadows**: Orange-tinted shadows with 0.2-0.5 opacity
+- **Smooth Animations**: Fade-in and slide-up transitions (800-1500ms)
 
 ### Interactions
 - **Tap**: Edit note

@@ -45,26 +45,26 @@ class MyApp extends StatelessWidget {
       title: 'Notes App with Authentication',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFFF5722)),
         useMaterial3: true,
-        scaffoldBackgroundColor: const Color(0xFFFFF8E7),
+        scaffoldBackgroundColor: const Color(0xFFFFE5B4),
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.orangeAccent,
-          foregroundColor: Colors.black,
+          backgroundColor: Color(0xFFFF5722),
+          foregroundColor: Colors.white,
           centerTitle: true,
           titleTextStyle: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: Color(0xFFFF5722),
         ),
         snackBarTheme: const SnackBarThemeData(
           backgroundColor: Colors.black87,
           contentTextStyle: TextStyle(color: Colors.white),
-          actionTextColor: Colors.orangeAccent,
+          actionTextColor: Color(0xFFFFAB40),
         ),
       ),
       home: const AuthenticationWrapper(),
@@ -96,7 +96,7 @@ class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
           // Show loading screen while checking authentication
           return const Scaffold(
             body: Center(
-              child: CircularProgressIndicator(color: Colors.deepOrange),
+              child: CircularProgressIndicator(color: Color(0xFFFF5722)),
             ),
           );
         }
@@ -225,7 +225,7 @@ class _NotesHomeState extends State<NotesHome> {
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20,
-            color: Colors.deepOrange,
+            color: Color(0xFFFF5722),
           ),
         ),
         content: TextField(
@@ -237,8 +237,15 @@ class _NotesHomeState extends State<NotesHome> {
             hintText: 'Type a short note',
             hintStyle: const TextStyle(color: Colors.grey),
             filled: true,
-            fillColor: Colors.orange.shade50,
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+            fillColor: const Color(0xFFFFE5B4),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: const BorderSide(color: Color(0xFFFF5722), width: 2),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: const BorderSide(color: Color(0xFFFF5722), width: 2),
+            ),
           ),
         ),
         actions: [
@@ -246,12 +253,12 @@ class _NotesHomeState extends State<NotesHome> {
             onPressed: () => Navigator.pop(context),
             child: const Text(
               'Cancel',
-              style: TextStyle(color: Colors.black87, fontSize: 16),
+              style: TextStyle(color: Color(0xFF5D4037), fontSize: 16),
             ),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.deepOrange,
+              backgroundColor: const Color(0xFFFF5722),
               foregroundColor: Colors.white,
               textStyle: const TextStyle(
                 fontWeight: FontWeight.bold,
@@ -283,16 +290,29 @@ class _NotesHomeState extends State<NotesHome> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Logout'),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        title: const Text(
+          'Logout',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Color(0xFFFF5722),
+          ),
+        ),
         content: const Text('Are you sure you want to logout?'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+            child: const Text(
+              'Cancel',
+              style: TextStyle(color: Color(0xFF5D4037)),
+            ),
           ),
           ElevatedButton(
             onPressed: () => Navigator.pop(context, true),
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.deepOrange),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFFF5722),
+              foregroundColor: Colors.white,
+            ),
             child: const Text('Logout'),
           ),
         ],
@@ -340,8 +360,8 @@ class _NotesHomeState extends State<NotesHome> {
                   'No notes yet. Press + to add.',
                   style: TextStyle(
                     fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black87,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF5D4037),
                   ),
                 ),
               )
@@ -354,12 +374,18 @@ class _NotesHomeState extends State<NotesHome> {
                       note.objectId ?? note.createdAt.toIso8601String(),
                     ),
                     background: Container(
-                      color: Colors.redAccent,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFFFF5722), Color(0xFFE64A19)],
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                       alignment: Alignment.centerLeft,
                       padding: const EdgeInsets.only(left: 20),
                       child: const Icon(
                         Icons.delete_forever,
                         color: Colors.white,
+                        size: 30,
                       ),
                     ),
                     direction: DismissDirection.startToEnd,
@@ -371,33 +397,30 @@ class _NotesHomeState extends State<NotesHome> {
                       ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.orange.shade100,
-                            Colors.orange.shade200,
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
+                        color: Colors.white,
+                        border: Border.all(
+                          color: const Color(0xFFFFAB40).withOpacity(0.5),
+                          width: 2,
                         ),
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
-                            color: Colors.black26,
-                            blurRadius: 4,
-                            offset: Offset(2, 2),
+                            color: const Color(0xFFFF5722).withOpacity(0.2),
+                            blurRadius: 8,
+                            offset: const Offset(0, 4),
                           ),
                         ],
                       ),
                       child: ListTile(
                         leading: const Icon(
-                          Icons.note_alt,
-                          color: Colors.black54,
-                          size: 26,
+                          Icons.note_alt_rounded,
+                          color: Color(0xFFFF5722),
+                          size: 28,
                         ),
                         title: Text(
                           note.text,
                           style: const TextStyle(
                             fontWeight: FontWeight.w600,
-                            color: Colors.black,
+                            color: Color(0xFF5D4037),
                             fontSize: 18,
                           ),
                         ),
@@ -405,7 +428,7 @@ class _NotesHomeState extends State<NotesHome> {
                           'Created: ${note.createdAt.toLocal().toString().substring(0, 16)}',
                           style: const TextStyle(
                             fontSize: 14,
-                            color: Colors.black87,
+                            color: Color(0xFF8D6E63),
                           ),
                         ),
                         onTap: () => _showAddEditDialog(index: i),
@@ -417,8 +440,9 @@ class _NotesHomeState extends State<NotesHome> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _showAddEditDialog(),
-        backgroundColor: Colors.deepOrange,
-        child: const Icon(Icons.add, color: Colors.white, size: 30),
+        backgroundColor: const Color(0xFFFF5722),
+        elevation: 8,
+        child: const Icon(Icons.add_rounded, color: Colors.white, size: 32),
       ),
     );
   }
