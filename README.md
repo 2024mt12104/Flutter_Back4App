@@ -212,10 +212,11 @@ static const String _className = 'Ajeesh_2024MT12104';
 ## 🎨 UI/UX Features
 
 ### Color Scheme
-- Primary: Deep Orange (`Colors.deepOrange`)
-- Accent: Orange Accent (`Colors.orangeAccent`)
-- Background: Peach gradient (`#FFE5B4`, `#FFD580`, `#FFCBA4`)
-- Surface: White with subtle shadows
+- **Primary**: Deep Orange ![#FF5722](https://via.placeholder.com/15/FF5722/FF5722.png) `#FF5722` (`Colors.deepOrange`)
+- **Accent**: Orange Accent ![#FFAB40](https://via.placeholder.com/15/FFAB40/FFAB40.png) `#FFAB40` (`Colors.orangeAccent`)
+- **Background**: Peach gradient 
+  - ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/FFE5B4.png) `#FFE5B4` → ![#FFD580](https://via.placeholder.com/15/FFD580/FFD580.png) `#FFD580` → ![#FFCBA4](https://via.placeholder.com/15/FFCBA4/FFCBA4.png) `#FFCBA4`
+- **Surface**: White ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000.png) `#FFFFFF` with subtle shadows
 
 ### Interactions
 - **Tap**: Edit note
