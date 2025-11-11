@@ -4,7 +4,7 @@
 
 A full-featured Flutter notes application with user authentication and cloud database integration using Back4App (Parse Server). This project is done as an assignment per Cross Platform Application Development <-> Mentored by [Chandan R N](chandanrn@wilp.bits-pilani.ac.in)
 
-📊 **[View Presentation](AjB4APP_Presentation.pptx)** - 6-slide project overview covering architecture, features, testing, and demo
+📊 **[View Presentation](AjB4APP_Presentation.pptx)** - A brief-slide on project overview covering architecture, features, testing and learnings.
 
 ## 🎯 Project Overview
 
