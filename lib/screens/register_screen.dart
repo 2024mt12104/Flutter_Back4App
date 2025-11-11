@@ -1,6 +1,10 @@
+// Copyright (c) 2024-2025 2024mt12104@wilp.bits-pilani.ac.in
+// All rights reserved.
+
 import 'package:flutter/material.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk_flutter.dart';
 import '../main.dart';
+import '../widgets/app_logo.dart';
 
 /// Registration screen for new users
 class RegisterScreen extends StatefulWidget {
@@ -167,46 +171,8 @@ class _RegisterScreenState extends State<RegisterScreen>
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // App Icon/Logo with pulsing glow
-                        TweenAnimationBuilder<double>(
-                          tween: Tween(begin: 0.0, end: 1.0),
-                          duration: const Duration(milliseconds: 2000),
-                          curve: Curves.easeInOut,
-                          builder: (context, value, child) {
-                            return Container(
-                              padding: const EdgeInsets.all(20),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: const Color(
-                                      0xFFFF5722,
-                                    ).withOpacity(0.6 * value),
-                                    blurRadius: 30,
-                                    spreadRadius: 10,
-                                  ),
-                                  BoxShadow(
-                                    color: const Color(
-                                      0xFFFFAB40,
-                                    ).withOpacity(0.3 * value),
-                                    blurRadius: 50,
-                                    spreadRadius: 15,
-                                  ),
-                                ],
-                              ),
-                              child: Icon(
-                                Icons.person_add_rounded,
-                                size: 60,
-                                color: Color.lerp(
-                                  const Color(0xFFFF5722),
-                                  const Color(0xFFFFAB40),
-                                  value,
-                                ),
-                              ),
-                            );
-                          },
-                        ),
+                        // App Logo with pulsing glow
+                        const AppLogo(size: 100, animated: true),
                         const SizedBox(height: 30),
 
                         // Title with gradient shader
@@ -639,6 +605,18 @@ class _RegisterScreenState extends State<RegisterScreen>
                 ),
               ),
             ),
+          ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.all(16),
+        child: Text(
+          '© ${DateTime.now().year} 2024mt12104@wilp.bits-pilani.ac.in',
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: Color(0xFF8D6E63),
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ),

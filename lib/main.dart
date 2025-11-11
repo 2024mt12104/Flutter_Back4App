@@ -1,3 +1,6 @@
+// Copyright (c) 2024-2025 2024mt12104@wilp.bits-pilani.ac.in
+// All rights reserved.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'db_helper.dart';
@@ -338,6 +341,83 @@ class _NotesHomeState extends State<NotesHome> {
       appBar: AppBar(
         title: const Text('My Notes'),
         actions: [
+          // About/Copyright info
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            tooltip: 'About',
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: const Text(
+                    'About AjB4APP',
+                    style: TextStyle(
+                      color: Color(0xFFFF5722),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Note It Down!',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFFFFAB40),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      const Text(
+                        'A simple and elegant note-taking app with cloud sync powered by Back4App.',
+                        style: TextStyle(fontSize: 14),
+                      ),
+                      const SizedBox(height: 16),
+                      const Divider(),
+                      const SizedBox(height: 8),
+                      Text(
+                        '© ${DateTime.now().year}',
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Color(0xFF8D6E63),
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      const Text(
+                        '2024mt12104@wilp.bits-pilani.ac.in',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF5D4037),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'All rights reserved.',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Color(0xFF8D6E63),
+                        ),
+                      ),
+                    ],
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text(
+                        'Close',
+                        style: TextStyle(
+                          color: Color(0xFFFF5722),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
           // Logout button
           IconButton(
             icon: const Icon(Icons.logout),
@@ -443,6 +523,28 @@ class _NotesHomeState extends State<NotesHome> {
         backgroundColor: const Color(0xFFFF5722),
         elevation: 8,
         child: const Icon(Icons.add_rounded, color: Colors.white, size: 32),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.9),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 10,
+              offset: const Offset(0, -2),
+            ),
+          ],
+        ),
+        child: Text(
+          '© ${DateTime.now().year} 2024mt12104@wilp.bits-pilani.ac.in',
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: Color(0xFF8D6E63),
+            fontSize: 11,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
       ),
     );
   }

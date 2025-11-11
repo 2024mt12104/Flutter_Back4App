@@ -61,9 +61,11 @@ lib/
 ├── db_helper.dart              # Database operations with Back4App
 ├── models/
 │   └── note.dart               # Note data model with Parse integration
-└── screens/
-    ├── login_screen.dart       # User login interface
-    └── register_screen.dart    # User registration interface
+├── screens/
+│   ├── login_screen.dart       # User login interface
+│   └── register_screen.dart    # User registration interface
+└── widgets/
+    └── app_logo.dart           # Custom app logo components
 ```
 
 ### Key Components
@@ -230,8 +232,17 @@ static const String _className = 'Ajeesh_2024MT12104';
 ### App Branding
 - **App Name**: **AjB4APP** (42px, bold, gradient shader)
 - **Tagline**: "Note It Down!" (20px, deep orange)
+- **Custom Logo**: Animated circular logo with document icon and pen overlay
+  - Features gradient colors and pulsing glow effects
+  - Three variants available: Full, Simple, and WithText
+  - Replaces generic icons on login and register screens
 - **Visual Hierarchy**: Clear separation between brand name and tagline
 - **Consistency**: Same branding appears on both login and registration screens
+- **Copyright Notice**: 
+  - Visible in app footer on all screens
+  - Dynamic year display (© 2025)
+  - About dialog with full copyright information
+  - Source code headers: © 2024-2025
 
 ### Color Scheme - Vibrant & Eye-Pleasing 🌟
 Our app features a cohesive, modern color palette designed for visual appeal and excellent readability:
@@ -467,13 +478,17 @@ Some code cannot be directly tested in unit tests due to:
 
 For detailed coverage analysis, see [`TEST_COVERAGE_REPORT.md`](TEST_COVERAGE_REPORT.md).
 
-##  License
+## 📄 License & Copyright
 
-This project is created for educational purposes.
+Copyright © 2024-2025 **2024mt12104@wilp.bits-pilani.ac.in**  
+All rights reserved.
+
+This project is created for educational purposes as part of the Cross Platform Application Development course at BITS Pilani.
 
 ## 👤 Author
 
-**Ajeesh** - Student ID: 2024MT12104
+**Ajeesh K Rajan** - Student ID: 2024MT12104  
+Email: 2024mt12104@wilp.bits-pilani.ac.in
 
 ## 🙏 Acknowledgments
 

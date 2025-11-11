@@ -1,3 +1,6 @@
+// Copyright (c) 2024-2025 2024mt12104@wilp.bits-pilani.ac.in
+// All rights reserved.
+
 import 'package:parse_server_sdk_flutter/parse_server_sdk_flutter.dart';
 import 'models/note.dart';
 
