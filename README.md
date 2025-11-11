@@ -138,8 +138,8 @@ dev_dependencies:
    
    Open `lib/main.dart` and update with your Back4App credentials:
    ```dart
-   const keyApplicationId = 'YOUR_APP_ID_HERE';
-   const keyClientKey = 'YOUR_CLIENT_KEY_HERE';
+   const keyApplicationId = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+   const keyClientKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
    const keyParseServerUrl = 'https://parseapi.back4app.com';
    ```
 
